@@ -1,0 +1,19 @@
+
+POST http://localhost:8080/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltBRE1JTiwgVVNFUl0iLCJpYXQiOjE2OTcyNTcyNTEsImV4cCI6MTY5NzM0MzY1MX0.mdgpYrxp3QwKByiQRoWIroARfjXqw9QP2-uGK1RT5WwzHwDYtdDJTJ7-Oy2FdhfPgfkWfb1oJgwgad3P0aUR0g
+
+{
+  "email": "test4@miu.edu",
+  "password": "123456",
+  "roles": [
+    {
+      "id": 2,
+      "name": "USER"
+    }
+  ]
+}
+
+###
+GET http://localhost:8080/users
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltBRE1JTiwgVVNFUl0iLCJpYXQiOjE2OTcyNTcyNTEsImV4cCI6MTY5NzM0MzY1MX0.mdgpYrxp3QwKByiQRoWIroARfjXqw9QP2-uGK1RT5WwzHwDYtdDJTJ7-Oy2FdhfPgfkWfb1oJgwgad3P0aUR0g

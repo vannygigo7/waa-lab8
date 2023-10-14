@@ -1,0 +1,33 @@
+GET http://localhost:8080/books
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltSb2xlKGlkPTEsIG5hbWU9QURNSU4pLCBSb2xlKGlkPTIsIG5hbWU9VVNFUildIiwiaWF0IjoxNjk3MjU1ODczLCJleHAiOjE2OTczNDIyNzN9.pnpzlMoJfGHYYUikcymw0K4sCqc8UAS81FYJxV-ES5KhWpEoi-bvfmdQVoYWq30r2lfNSmPVdbKNZXQcX2sLVg
+
+###
+GET http://localhost:8080/books/3
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltSb2xlKGlkPTEsIG5hbWU9QURNSU4pLCBSb2xlKGlkPTIsIG5hbWU9VVNFUildIiwiaWF0IjoxNjk3MjU1ODczLCJleHAiOjE2OTczNDIyNzN9.pnpzlMoJfGHYYUikcymw0K4sCqc8UAS81FYJxV-ES5KhWpEoi-bvfmdQVoYWq30r2lfNSmPVdbKNZXQcX2sLVg
+
+###
+POST http://localhost:8080/books
+Authorization: Basic user 123456
+content-type:application/json
+
+{
+  "title": "Book 3",
+  "isbn": "2222-2222",
+  "price": 20
+}
+
+###
+PUT http://localhost:8080/books/7
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltBRE1JTiwgVVNFUl0iLCJpYXQiOjE2OTcyNTcyNTEsImV4cCI6MTY5NzM0MzY1MX0.mdgpYrxp3QwKByiQRoWIroARfjXqw9QP2-uGK1RT5WwzHwDYtdDJTJ7-Oy2FdhfPgfkWfb1oJgwgad3P0aUR0g
+content-type:application/json
+
+{
+  "id": 3,
+  "title": "Book 3",
+  "isbn": "3333-3333",
+  "price": 30
+}
+
+###
+DELETE http://localhost:8080/books/6
+Authorization: Basic admin 123456
