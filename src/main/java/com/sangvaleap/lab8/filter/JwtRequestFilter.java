@@ -70,6 +70,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         Set<Role> myroles = new HashSet<>();
         Arrays.stream(roles.split(",")).forEach(r -> {
             myroles.add(new Role(r));
+            System.out.println("############################");
+            System.out.println(r);
         });
         userDetails.setRoles(myroles);
         return userDetails;

@@ -25,7 +25,7 @@ public class BookServiceImpl implements BookService {
         return bookRepository.findById(id).orElseThrow(()-> new Exception("Book is not found."));
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     @Override
     public Book addBook(Book book) {
         return bookRepository.save(book);
@@ -41,7 +41,7 @@ public class BookServiceImpl implements BookService {
         }
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     @Override
     public void deleteBook(Long id) throws Exception{
         if(bookRepository.existsById(id)) {

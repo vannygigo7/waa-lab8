@@ -1,5 +1,6 @@
 GET http://localhost:8080/books
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltSb2xlKGlkPTEsIG5hbWU9QURNSU4pLCBSb2xlKGlkPTIsIG5hbWU9VVNFUildIiwiaWF0IjoxNjk3MjU1ODczLCJleHAiOjE2OTczNDIyNzN9.pnpzlMoJfGHYYUikcymw0K4sCqc8UAS81FYJxV-ES5KhWpEoi-bvfmdQVoYWq30r2lfNSmPVdbKNZXQcX2sLVg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0LHRlc3Q0QG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltVU0VSXSIsImlhdCI6MTY5NzMxNjkyNSwiZXhwIjoxNjk3NDAzMzI1fQ.pzDfDLyS3N-qdUYH_-MKGHm43UKFXpr-D7yP66vpjDnvg_nru7r5casHewjfVeku-cfIgJ4u3DTKF7a7pfkysQ
+#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltSb2xlKGlkPTEsIG5hbWU9QURNSU4pLCBSb2xlKGlkPTIsIG5hbWU9VVNFUildIiwiaWF0IjoxNjk3MjU1ODczLCJleHAiOjE2OTczNDIyNzN9.pnpzlMoJfGHYYUikcymw0K4sCqc8UAS81FYJxV-ES5KhWpEoi-bvfmdQVoYWq30r2lfNSmPVdbKNZXQcX2sLVg
 
 ###
 GET http://localhost:8080/books/3
@@ -11,23 +12,25 @@ Authorization: Basic user 123456
 content-type:application/json
 
 {
-  "title": "Book 3",
+  "title": "Book 4",
   "isbn": "2222-2222",
   "price": 20
 }
 
 ###
-PUT http://localhost:8080/books/7
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltBRE1JTiwgVVNFUl0iLCJpYXQiOjE2OTcyNTcyNTEsImV4cCI6MTY5NzM0MzY1MX0.mdgpYrxp3QwKByiQRoWIroARfjXqw9QP2-uGK1RT5WwzHwDYtdDJTJ7-Oy2FdhfPgfkWfb1oJgwgad3P0aUR0g
+PUT http://localhost:8080/books/1
+#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0LHRlc3Q0QG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltVU0VSXSIsImlhdCI6MTY5NzMxNjkyNSwiZXhwIjoxNjk3NDAzMzI1fQ.pzDfDLyS3N-qdUYH_-MKGHm43UKFXpr-D7yP66vpjDnvg_nru7r5casHewjfVeku-cfIgJ4u3DTKF7a7pfkysQ
+Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltBRE1JTiwgVVNFUl0iLCJpYXQiOjE2OTczMTc2MjYsImV4cCI6MTY5NzQwNDAyNn0.xJ92-5KBQLM7SKsA4l5c4r0YZCsdKJTWI6tp_5oPNoFULFpIfHQDgkzDo5rg9HYXF-KoShncKxrlc6xZiqI_hQ
 content-type:application/json
 
 {
-  "id": 3,
-  "title": "Book 3",
-  "isbn": "3333-3333",
-  "price": 30
+  "id": 1,
+  "title": "Book 1",
+  "isbn": "1111-1111",
+  "price": 10
 }
 
 ###
-DELETE http://localhost:8080/books/6
-Authorization: Basic admin 123456
+DELETE http://localhost:8080/books/2
+#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0LHRlc3Q0QG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltVU0VSXSIsImlhdCI6MTY5NzMxNjkyNSwiZXhwIjoxNjk3NDAzMzI1fQ.pzDfDLyS3N-qdUYH_-MKGHm43UKFXpr-D7yP66vpjDnvg_nru7r5casHewjfVeku-cfIgJ4u3DTKF7a7pfkysQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHRlc3QxQG1pdS5lZHUiLCJpc3MiOiJNSVUiLCJyb2xlcyI6IltBRE1JTiwgVVNFUl0iLCJpYXQiOjE2OTczMTc2MjYsImV4cCI6MTY5NzQwNDAyNn0.xJ92-5KBQLM7SKsA4l5c4r0YZCsdKJTWI6tp_5oPNoFULFpIfHQDgkzDo5rg9HYXF-KoShncKxrlc6xZiqI_hQ
